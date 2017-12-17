@@ -1,0 +1,4 @@
+fonts/*.font
+
+dismantled/*
+!dismantled/readme.md

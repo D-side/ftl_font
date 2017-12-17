@@ -1,0 +1,1 @@
+This folder is intended for dismantled fonts; they're left out of GitHub in order to not clutter the repository and to avoid redistributing game assets, which Subset Games, authors of FTL Faster Than Light, have kindly requested all modders not to do.

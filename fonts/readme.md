@@ -1,0 +1,1 @@
+This is a folder for `*.font` files you intend to manipulate. It's not built into the code of the format parser itself, but scripts that will perform practical operations (dismantling, assembling) **will** assume that.
