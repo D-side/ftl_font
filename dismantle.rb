@@ -20,6 +20,3 @@ Dir["fonts/*.font"]
   FtlFont.open(filename).dismantle_into(path)
   puts "done!"
 end
-
-puts("Done. Shutting down in 10 seconds...")
-sleep(10.0)
