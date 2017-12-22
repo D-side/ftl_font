@@ -6,6 +6,8 @@ require "ftl_font/character"
 require "ftl_font/font_section"
 require "ftl_font/tex_section"
 
+# Represents a font in a structured way
+# Needs splitting into its binary and structured
 class FtlFont
   attr_accessor :bytes, :font_section, :tex_section, :characters
 
@@ -54,7 +56,7 @@ class FtlFont
   def save_manifest(path)
     data = characters.map do |c|
       image = if c.w != 0 && c.h != 0
-        "#{c.char_code}.png"
+        "#{c.character}.png"
       else
         # The PNG would be invalid, but some data
         # has to be preserved nonetheless

@@ -19,11 +19,11 @@ class FtlFont
     # These accessors allow you to work with it
     # as single-char UTF-8 string. Neato.
     def utf8_character
-      char_code.chr(Encoding::UTF_8)
+      character.chr(Encoding::UTF_8)
     end
 
     def utf8_character=(c)
-      self.char_code = c.ord
+      self.character = c.ord
     end
   end
 end
