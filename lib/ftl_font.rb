@@ -9,7 +9,7 @@ require "ftl_font/tex_section"
 # Represents a font in a structured way
 # Needs splitting into its binary and structured
 class FtlFont
-  attr_accessor :bytes, :font_section, :tex_section, :characters
+  attr_accessor :bytes, :font_section, :tex_section, :characters, :name
 
   class << self
     private :new
@@ -19,7 +19,8 @@ class FtlFont
   # at a given path.
   def self.open(filename)
     new.tap do |f|
-      f.bytes = File.read(filename, encoding: "binary")
+      f.name = File.basename(filename, ".*")
+      f.bytes = File.read(filename, mode: "rb",  encoding: "binary")
       f.font_section = FontSection.new(f.bytes[0, 24])
       f.characters = (0..f.font_section.character_count - 1).map do |i|
         Character.new(f.bytes[24 + 16 * i, 16])
@@ -34,6 +35,10 @@ class FtlFont
     save_manifest(path)
     save_character_pngs(path)
     true
+  end
+
+  def inspect
+    "#<Font:#{name}, #{characters.length} characters, FONT #{font_section.section_size} bytes, TEX #{tex_section.width}x#{tex_section.height}>"
   end
 
   private
