@@ -2,6 +2,9 @@
 
 # frozen_string_literal: true
 
+# Necessary for incremental output in tools like atom-build
+STDOUT.sync = true
+
 $LOAD_PATH << File.expand_path("../lib", __FILE__)
 
 require "ftl_font"
@@ -17,6 +20,6 @@ Dir["fonts/*.font"]
   end
   print "|*| [#{filename}] => [#{path}]\n    working... "
   Dir.mkdir(path)
-  FtlFont.open(filename).dismantle_into(path)
+  FtlFont::Binary::File.open(filename).dismantle_into(path)
   puts "done!"
 end
