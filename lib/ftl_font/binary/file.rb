@@ -8,10 +8,6 @@ require_relative "tex_section"
 module FtlFont
   module Binary
     File = Struct.new(:font, :tex, :name) do
-      INDEXES_LIST_FILE = "indexes.json"
-      DEFAULT_INDEX = "source.json"
-      DEFAULT_INDEXES = JSON.pretty_generate([DEFAULT_INDEX]).freeze
-
       def self.open(path)
         name = ::File.basename(path, ".*")
         bytes = ::File.read(path, mode: "rb", encoding: "binary")
@@ -36,17 +32,14 @@ module FtlFont
             image: (filename if image),
             w: c.w,
             h: c.h,
+            baseline: c.baseline,
             before: c.before,
             after: c.after
           }
         end
         ::File.write(
-          ::File.join(directory, DEFAULT_INDEX),
+          ::File.join(directory, "index.json"),
           JSON.pretty_generate(data)
-        )
-        ::File.write(
-          ::File.join(directory, INDEXES_LIST_FILE),
-          DEFAULT_INDEXES
         )
       end
 
