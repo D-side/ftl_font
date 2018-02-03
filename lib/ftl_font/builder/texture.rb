@@ -45,22 +45,32 @@ module FtlFont
       # Appends the given PNG image and writes down its location (bounding box)
       # into the layout by the given key.
       def append_image!(image, key)
+        reserve_space!(image.width, image.height, key) do |x, y|
+          texture.replace!(image, x, y)
+        end
+      end
+
+      # Reserves space of given dimensions on the texture, records resulting
+      # bounding box in the layout and yields the top-left corner of the result.
+      # Particularly useful for skipping space for blank symbols.
+      def reserve_space!(w, h, key)
         raise "Key already exists: \"#{key}\"" if layout.key?(key)
-        newline! unless can_fit_width?(image.width)
-        ensure_line_height!(image.height)
-        # Calculate bounding box
+        newline! unless can_fit_width?(w)
+        ensure_line_height!(h)
         x = @cursor_x + 1
         y = @cursor_y + 1
-        w = image.width
-        h = image.height
         @cursor_x += w + 1
-        texture.replace!(image, x, y)
+        yield x, y if block_given?
         layout[key] = { x: x, y: y, w: w, h: h }
       end
 
-      def export(dir, name)
-        texture.save(File.join(dir, "#{name}.png"))
-        File.write(File.join(dir, "#{name}.json"), JSON.pretty_generate(layout))
+      def export(dir)
+        texture.save(File.join(dir, "atlas.png"))
+        File.write(
+          File.join(dir, "atlas.json"),
+          JSON.pretty_generate(layout),
+          encoding: Encoding::UTF_8
+        )
       end
 
       private

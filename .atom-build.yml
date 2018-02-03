@@ -2,6 +2,5 @@ cmd: echo Hi, the command worked! Choose another by hitting F7.
 targets:
   dismantle:
     cmd: ruby dismantle.rb
-    name: "Dismantle fonts: \"fonts\" => \"dismantled\""
   assemble:
-    cmd: echo This command is not implemented yet. Stay tuned for updates!
+    cmd: ruby assemble.rb

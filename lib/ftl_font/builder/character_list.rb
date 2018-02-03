@@ -9,7 +9,8 @@ module FtlFont
       end
 
       def append_folder!(folder)
-        JSON.parse(File.read(File.join(folder, "index.json"))).each do |char|
+        index = File.join(folder, "index.json")
+        JSON.parse(File.read(index, encoding: Encoding::UTF_8)).each do |char|
           if char["image"].is_a?(String)
             png = ChunkyPNG::Image.from_file(File.join(folder, char["image"]))
           end

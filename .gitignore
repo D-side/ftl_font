@@ -1,6 +1,6 @@
 fonts/*.font
-assembled/*.font
+assembled/*
+!assembled/readme.md
 
 dismantled/*
-additions/*
 !dismantled/readme.md
