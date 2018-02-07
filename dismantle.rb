@@ -20,6 +20,6 @@ Dir["fonts/*.font"]
   end
   print "|*| [#{filename}] => [#{path}]\n    working... "
   Dir.mkdir(path)
-  FtlFont::Binary::File.open(filename).dismantle_into(path)
+  FtlFont::BinaryWrapper.load(filename).dismantle_into(path)
   puts "done!"
 end

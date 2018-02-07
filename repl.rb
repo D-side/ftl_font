@@ -7,6 +7,6 @@ require "pry"
 
 @fonts = Dir[File.join("fonts", "*.font")]
          .tap { |fns| puts "--- #{fns.size} files found" }
-         .map(&FtlFont::Binary::File.method(:open))
+         .map(&FtlFont::BinaryWrapper.method(:load))
 
 Pry.start

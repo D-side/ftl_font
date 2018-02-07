@@ -1,2 +1,11 @@
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/ftl_font/binary_wrapper.rb'
+Style/Documentation:
+  Enabled: true
+  Exclude:
+    - 'lib/ftl_font/binary/*'

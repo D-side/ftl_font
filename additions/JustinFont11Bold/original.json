@@ -1,0 +1,332 @@
+[
+  {
+    "character": "А",
+    "baseline": 11,
+    "image": "1040.png"
+  },
+  {
+    "character": "Б",
+    "baseline": 11,
+    "image": "1041.png"
+  },
+  {
+    "character": "В",
+    "baseline": 11,
+    "image": "1042.png"
+  },
+  {
+    "character": "Г",
+    "baseline": 11,
+    "image": "1043.png"
+  },
+  {
+    "character": "Д",
+    "baseline": 11,
+    "image": "1044.png"
+  },
+  {
+    "character": "Е",
+    "baseline": 11,
+    "image": "1045.png"
+  },
+  {
+    "character": "Ё",
+    "baseline": 12,
+    "image": "1025.png"
+  },
+  {
+    "character": "Ж",
+    "baseline": 11,
+    "image": "1046.png"
+  },
+  {
+    "character": "З",
+    "baseline": 11,
+    "image": "1047.png"
+  },
+  {
+    "character": "И",
+    "baseline": 11,
+    "image": "1048.png"
+  },
+  {
+    "character": "Й",
+    "baseline": 12,
+    "image": "1049.png"
+  },
+  {
+    "character": "К",
+    "baseline": 11,
+    "image": "1050.png"
+  },
+  {
+    "character": "Л",
+    "baseline": 11,
+    "image": "1051.png"
+  },
+  {
+    "character": "М",
+    "baseline": 11,
+    "image": "1052.png"
+  },
+  {
+    "character": "Н",
+    "baseline": 11,
+    "image": "1053.png"
+  },
+  {
+    "character": "О",
+    "baseline": 11,
+    "image": "1054.png"
+  },
+  {
+    "character": "П",
+    "baseline": 11,
+    "image": "1055.png"
+  },
+  {
+    "character": "Р",
+    "baseline": 11,
+    "image": "1056.png"
+  },
+  {
+    "character": "С",
+    "baseline": 11,
+    "image": "1057.png"
+  },
+  {
+    "character": "Т",
+    "baseline": 11,
+    "image": "1058.png"
+  },
+  {
+    "character": "У",
+    "baseline": 11,
+    "image": "1059.png"
+  },
+  {
+    "character": "Ф",
+    "baseline": 11,
+    "image": "1060.png"
+  },
+  {
+    "character": "Х",
+    "baseline": 11,
+    "image": "1061.png"
+  },
+  {
+    "character": "Ц",
+    "baseline": 11,
+    "image": "1062.png"
+  },
+  {
+    "character": "Ч",
+    "baseline": 11,
+    "image": "1063.png"
+  },
+  {
+    "character": "Ш",
+    "baseline": 11,
+    "image": "1064.png"
+  },
+  {
+    "character": "Щ",
+    "baseline": 11,
+    "image": "1065.png"
+  },
+  {
+    "character": "Ъ",
+    "baseline": 11,
+    "image": "1066.png"
+  },
+  {
+    "character": "Ы",
+    "baseline": 11,
+    "image": "1067.png"
+  },
+  {
+    "character": "Ь",
+    "baseline": 11,
+    "image": "1068.png"
+  },
+  {
+    "character": "Э",
+    "baseline": 11,
+    "image": "1069.png"
+  },
+  {
+    "character": "Ю",
+    "baseline": 11,
+    "image": "1070.png"
+  },
+  {
+    "character": "Я",
+    "baseline": 11,
+    "image": "1071.png"
+  },
+  {
+    "character": "а",
+    "baseline": 8,
+    "image": "1072.png"
+  },
+  {
+    "character": "б",
+    "baseline": 10,
+    "image": "1073.png"
+  },
+  {
+    "character": "в",
+    "baseline": 8,
+    "image": "1074.png"
+  },
+  {
+    "character": "г",
+    "baseline": 8,
+    "image": "1075.png"
+  },
+  {
+    "character": "д",
+    "baseline": 8,
+    "image": "1076.png"
+  },
+  {
+    "character": "е",
+    "baseline": 8,
+    "image": "1077.png"
+  },
+  {
+    "character": "ё",
+    "baseline": 11,
+    "image": "1105.png"
+  },
+  {
+    "character": "ж",
+    "baseline": 8,
+    "image": "1078.png"
+  },
+  {
+    "character": "з",
+    "baseline": 8,
+    "image": "1079.png"
+  },
+  {
+    "character": "и",
+    "baseline": 8,
+    "image": "1080.png"
+  },
+  {
+    "character": "й",
+    "baseline": 11,
+    "image": "1081.png"
+  },
+  {
+    "character": "к",
+    "baseline": 8,
+    "image": "1082.png"
+  },
+  {
+    "character": "л",
+    "baseline": 8,
+    "image": "1083.png"
+  },
+  {
+    "character": "м",
+    "baseline": 8,
+    "image": "1084.png"
+  },
+  {
+    "character": "н",
+    "baseline": 8,
+    "image": "1085.png"
+  },
+  {
+    "character": "о",
+    "baseline": 8,
+    "image": "1086.png"
+  },
+  {
+    "character": "п",
+    "baseline": 8,
+    "image": "1087.png"
+  },
+  {
+    "character": "р",
+    "baseline": 8,
+    "image": "1088.png"
+  },
+  {
+    "character": "с",
+    "baseline": 8,
+    "image": "1089.png"
+  },
+  {
+    "character": "т",
+    "baseline": 8,
+    "image": "1090.png"
+  },
+  {
+    "character": "у",
+    "baseline": 8,
+    "image": "1091.png"
+  },
+  {
+    "character": "ф",
+    "baseline": 10,
+    "image": "1092.png"
+  },
+  {
+    "character": "х",
+    "baseline": 8,
+    "image": "1093.png"
+  },
+  {
+    "character": "ц",
+    "baseline": 8,
+    "image": "1094.png"
+  },
+  {
+    "character": "ч",
+    "baseline": 8,
+    "image": "1095.png"
+  },
+  {
+    "character": "ш",
+    "baseline": 8,
+    "image": "1096.png"
+  },
+  {
+    "character": "щ",
+    "baseline": 8,
+    "image": "1097.png"
+  },
+  {
+    "character": "ъ",
+    "baseline": 8,
+    "image": "1098.png"
+  },
+  {
+    "character": "ы",
+    "baseline": 8,
+    "image": "1099.png"
+  },
+  {
+    "character": "ь",
+    "baseline": 8,
+    "image": "1100.png"
+  },
+  {
+    "character": "э",
+    "baseline": 8,
+    "image": "1101.png"
+  },
+  {
+    "character": "ю",
+    "baseline": 8,
+    "image": "1102.png"
+  },
+  {
+    "character": "я",
+    "baseline": 8,
+    "image": "1103.png"
+  }
+]

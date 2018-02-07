@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require "bit-struct"
-require_relative "utf8_code_formatter"
+require "ftl_font/utf8_code_formatter"
 
 module FtlFont
-  module Binary
+  class Binary
     # A single binary entry of a character table. It contains data about the
     # character itself as well as its location in the font's texture
     class Character < BitStruct
@@ -33,7 +33,7 @@ module FtlFont
       end
 
       # Returns an image of this particular symbol on the given PNG texture.
-      # Or nil, if it's not possible.
+      # Or nil, if the resulting image would be empty and thus invalid.
       def image_from(png_texture)
         png_texture.crop(x, y, w, h) unless empty?
       end

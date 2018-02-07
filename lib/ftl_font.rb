@@ -3,7 +3,7 @@
 require "chunky_png"
 require "json"
 
-require "ftl_font/binary/file"
+require "ftl_font/binary_wrapper"
 require "ftl_font/builder/texture"
 require "ftl_font/builder/character_list"
 
