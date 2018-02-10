@@ -4,3 +4,5 @@ targets:
     cmd: ruby dismantle.rb
   assemble:
     cmd: ruby assemble.rb
+  reassemble:
+    cmd: ruby reassemble.rb

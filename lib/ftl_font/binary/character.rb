@@ -24,6 +24,10 @@ module FtlFont
       alias x left
       alias y top
 
+      # FIXME: for temporary lack of a better class that houses a character AND
+      # its image, the image is stored here, in this attribute.
+      attr_accessor :temp_image
+
       # Some characters occupy an area of zero pixels, as surprising as this
       # may sound. ChunkyPNG is fine with exporting PNGs like this one, but
       # it isn't okay with importing them back. Use this method to circumvent

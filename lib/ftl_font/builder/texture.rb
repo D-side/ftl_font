@@ -14,11 +14,15 @@ module FtlFont
       WIDTH = 256
       DEFAULT_HEIGHT = 32
       MAX_HEIGHT = 1024 # sanity limit, should never be reached
-      BACKGROUND = 0xff_ff_ff_ff
+      BACKGROUND = 0x00_00_00_ff
 
       # Texture being filled
       # => ChunkyPNG::Image
       attr_reader :texture
+
+      # FIXME: layout storage doesn't belong here, all necessary layout details
+      # are already yielded, the responsibility to keep track of it should lie
+      # with the consumer
 
       # Atlas layout data: where's what
       # {
@@ -43,10 +47,12 @@ module FtlFont
       end
 
       # Appends the given PNG image and writes down its location (bounding box)
-      # into the layout by the given key.
+      # into the layout by the given key. Optionally accepts a block and yields
+      # the top-left corner of the allocated space.
       def append_image!(image, key)
         reserve_space!(image.width, image.height, key) do |x, y|
           texture.replace!(image, x, y)
+          yield x, y if block_given?
         end
       end
 

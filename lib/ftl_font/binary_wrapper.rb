@@ -27,7 +27,7 @@ module FtlFont
     end
 
     def save(filename)
-      File.write(filename, dump, encoding: "binary")
+      File.write(filename, dump, encoding: "binary", mode: "wb")
     end
 
     # Dumps the structs as a single binary string for writing into a file.

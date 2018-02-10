@@ -1,4 +1,6 @@
-[
-  "dismantled/JustinFont11Bold",
-  "additions/JustinFont11Bold"
-]
+{
+  "source": "JustinFont11Bold.font",
+  "additions": [
+    "JustinFont11Bold"
+  ]
+}
