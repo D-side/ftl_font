@@ -38,11 +38,16 @@ module FtlFont
     # Dismantles the font in editable format for
     def dismantle_into(directory)
       texture = tex.png
-      data = chars.map do |c|
+      data = chars.reject(&:empty?).map do |c|
         filename = "#{c.character}.png"
-        image = c.image_from(texture)
-        image&.save(File.join(directory, filename))
-        c.to_h.merge(character: c.utf8_character, image: (filename if image))
+        c.image_from(texture).save(File.join(directory, filename))
+        {
+          character: c.utf8_character,
+          baseline: c.baseline,
+          image: filename,
+          before: c.before,
+          after: c.after
+        }
       end
       File.write(File.join(directory, "index.json"), JSON.pretty_generate(data))
     end

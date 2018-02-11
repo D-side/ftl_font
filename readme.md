@@ -1,6 +1,6 @@
 # FTL 1.6 Font manipulation tools
 
-This is a toolset for dissecting fonts from [FTL: Faster Than Light](https://subsetgames.com/ftl.html) version 1.6.
+This is a toolset for adding and replacing characters in fonts from [FTL: Faster Than Light](https://subsetgames.com/ftl.html) version 1.6.
 
 The initial intended goal for this project is to add cyrillic symbols to these fonts, but if you find other uses for these tools, go ahead!
 
@@ -24,11 +24,13 @@ It will work on Linux and OS X as well with no changes, but the guides might not
 
 ### Using the toolset
 
+#### Patching
+
 Just so you know what's what, the build process goes like this:
 
 * It scans `font_templates` folder for any `*.json` files; for each `<name>.json` file found:
   * It opens the font specified in the `source` option
-  * It merges in every set of additions in the `additions` option
+  * It merges in every set of additions in the `additions` option (an "addition" is a folder of characters to add or replace)
   * It saves the resulting font into the `assembled` folder under the name of `<name>.font` (after the `*.json` file from `font_templates`)
 
 So to alter a font you'll need to create:
@@ -46,10 +48,17 @@ If you've done that, or you want to build an example font, execute the `reassemb
 
 **Note:** in case such a font already exists there, it _silently overwrites_ it! This is just to make adjustments quicker.
 
+#### Dismantling
+
+Useful if you want original characters from a font with the intent to edit them or just change their parameters.
+
+The process is easy: run `dismantle.rb` and wait until it completes. You should then have a bunch of `*.original` folders inside the `additions` folder, ready to modify as you see fit. Yes, they are ready-to-use additions too.
+
 ## Limitations
 
+* Some characters, namely ` ` (space) have **zero width** in the original fonts and thus cannot be exported as PNGs (ChunkyPNG, that I'm using, can do it, but it will choke when trying to open the result). Such characters are not currently supported in additions. Zero width can be emulated by using a 1-pixel wide black "character" with one of the spacings (`before` or `after`) set 1 pixel smaller (negatives are valid in spacings too!). You can also let me know you need proper support for these by filing an issue.
 * Characters do not support colors. Internally every pixel is represented in the font as a single byte, specifying a value of opaqueness, e. g. `0x00` for fully transparent and `0xFF` for fully opaque. It makes sense to only use white, black and grays. Others won't cause crashes, but will be converted to grays anyway with an algorithm I don't know (or want to know, really).
-* Removal of characters from a font is possible, but is not supported at this time.
+* Removing existing characters from fonts is not supported at this time. It's not hard to add, but there has been no demand for this.
 
 ## Contributing
 
