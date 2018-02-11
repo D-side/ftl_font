@@ -1,8 +1,4 @@
 cmd: echo Hi, the command worked! Choose another by hitting F7.
 targets:
-  dismantle:
-    cmd: ruby dismantle.rb
-  assemble:
-    cmd: ruby assemble.rb
   reassemble:
     cmd: ruby reassemble.rb
