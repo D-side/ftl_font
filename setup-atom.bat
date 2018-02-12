@@ -1,1 +1,2 @@
-apm install build
+call apm install build
+pause
