@@ -14,8 +14,8 @@ module FtlFont
       unsigned :width,      8,  "Width"
       unsigned :height,     8,  "Height"
       signed :baseline,     8,  "Baseline location"
-      signed :before,       16, "Spacing before" # not sure yet
-      signed :after,        16, "Spacing after" # not sure yet
+      signed :before,       16, "Spacing before"
+      signed :after,        16, "Spacing after"
       octets :unknown1,     8
       # 128 bits = 16 bytes total
       alias w width

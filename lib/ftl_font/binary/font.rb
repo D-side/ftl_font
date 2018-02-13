@@ -13,7 +13,9 @@ module FtlFont
       unsigned :character_count, 16
       unsigned :character_length, 16 # not sure yet
       unsigned :section_size, 32 # 16-byte offset
-      octets :unknown2, 32
+      octets :unknown2, 8
+      unsigned :tex_height, 16 # ?!
+      octets :unknown3, 8
 
       # Total size of "useful data", in bytes.
       def total_payload_size

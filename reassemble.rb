@@ -63,17 +63,8 @@ Dir["font_templates/*.json"].each do |template_file|
   binwrap.tex.png = texture_builder.texture
   binwrap.font.character_count = binwrap.chars.size
   binwrap.font.section_size = binwrap.font.total_padded_size
+  binwrap.font.tex_height = binwrap.tex.height
 
   font_name = File.basename(template_file, ".json")
-  # Dir.mkdir(File.join("assembled", font_name))
-  # texture_builder.texture.save(File.join("assembled", font_name, "atlas.png"))
-  # File.write(
-  #   File.join("assembled", font_name, "atlas.json"),
-  #   JSON.pretty_generate(binwrap.chars.map(&:to_h))
-  # )
   binwrap.save(File.join("assembled", "#{font_name}.font"))
-
-  # require "pry"
-  # binding.pry
-  # nil
 end
